@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <!--Meta tags-->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <meta http-equiv="x-ua-compatible" content="ie=edge">
+            <meta name="description" content="Coming Soon">
+            <meta name="author" content="Dorina Mihai">
+            <meta name="keywords" content="coming soon, new website, template">
+            <!--Stylesheets-->
+            <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+            <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700" rel="stylesheet"> 
+            <link href="node_modules/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css">
+			<link rel="stylesheet" href="css/main.css">
+			<link rel="shortcut icon" href="img/power.png" />
+            <title>Dorina Mihai</title>
+        </head>
+		
+        <body>
+		
+			<div class="container">
+				<div class="row">
+					<div class="content col-md-12 text-center text-white ">
+
+							<div id="countdown-timer"></div>
+
+							<h1 class="my-4">Coming Soon!</h1>
+								<p class="mb-5 col-md-6 col-center">I'm working hard to finish the development of my site and the launch date is <strong>September 2018</strong>! Sign up for updates using the form below!</p>
+								
+							
+							<form id="contact-form" method="post" action="contact.php">
+								<div class="messages">
+									<div class="controls">
+									
+										<div class="col-md-6 col-center input-group input-group-newsletter mb-5">
+											
+												<label for="form_email"></label>
+												<input id="form_email" type="email" name="email" class="form-control" placeholder="Your email *" required="required" data-error="Valid email is required.">
+												<div class="help-block with-errors"></div>
+											
+												<div class="text-center input-group-append">
+													<input type="submit" class="btn btn-danger btn-lg btn-send" value="Notify me!">
+												</div>
+										</div>
+										
+									</div>
+								</div>
+							</form>
+							
+							<div class="my-4">
+								<a href="https://github.com/dorinam" target="_blank" rel="github"><i class="fa fa-github fa-4x"></i></a>
+							</div>
+					</div>
+				</div>
+			</div>
+
+		<!-- COOKIES -->
+		<div class="alert text-center cookiealert" role="alert">
+			Cookies are important to the proper functioning of a site. To improve your experience, we use cookies.
+			<a class="btn btn-secondary btn-sm" href="http://cookiesandyou.com/" target="_blank"> Learn more</a>
+			<button type="button" class="btn btn-danger btn-sm acceptcookies" aria-label="Close">I agree</button>
+		</div>
+						
+		<footer>
+			<div class="container">
+                <p class="mb-0 text-center text-muted"><small>Copyright &copy; Dorina Mihai 2018. <br>This is a project created and mantained by Dorina Mihai. Based on Bootstrap.</small></p>
+            </div>
+		</footer>
+		
+		 <!--Scripts-->
+        <script src="node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <!-- Custom scripts for this template -->
+		<script src="js/cookies.js"></script>
+		<script>
+		var countDownDate = new Date("September 5, 2018 09:30:00").getTime();
+		var x = setInterval(function() {
+		  var now = new Date().getTime();
+		  var distance = countDownDate - now;
+		  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		  document.getElementById("countdown-timer").innerHTML = "<div><span class='days'>" + days + "</span><div class='text'>days</div></div>" +
+		  "<div><span class='hours'>" + hours + "</span><div class='text'>hours</div></div>" +
+		  "<div><span class='minutes'>" + minutes + "</span><div class='text'>minutes</div></div>" + 
+		  "<div><span class='seconds'>" + seconds + "</span><div class='text'>seconds</div></div> ";
+		  
+		  if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("countdown-timer").innerHTML = "Launch day";
+		  }
+		}, 1000); 
+		</script>
+		<script src="js/contact.js"></script>
+		
+		</body>
+	</html>
